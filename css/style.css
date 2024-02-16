@@ -50,6 +50,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    z-index: 0;
 }
 
 section {
@@ -96,6 +97,7 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
+    z-index: -1;
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -109,6 +111,7 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
+    z-index: 0;
 }
 
 .section__title--intro strong {
@@ -126,6 +129,7 @@ h3 { font-size: var(--fs-h3) }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
+    z-index: -1;
 }
 
 .section__subtitle--work {
@@ -157,7 +161,7 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 5;
     
     transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -269,13 +273,14 @@ header {
             "img title"
             "img subtitle";
         grid-template-columns: min-content max-content;
+        z-index: -1;
     }
     
     .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
-        z-index: 2;
+        z-index: -1;
     }    
     
     .section__subtitle--intro {
@@ -286,6 +291,7 @@ header {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
+        z-index: -1;
     }
 }
 
@@ -347,6 +353,7 @@ header {
 
 .about-me__img {
     box-shadow: var(--bs);
+    z-index: 0;
 }
 
 @media (min-width: 600px) {
@@ -377,7 +384,7 @@ header {
     .about-me__img {
         grid-area: img;
         position: relative;
-        z-index: 2;
+        z-index: -1;
     }
 }
 
